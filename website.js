@@ -1,3 +1,11 @@
+var morgan  = require('morgan');
+Object.assign=require('object-assign')
+app.engine('html', require('ejs').renderFile);
+app.use(morgan('combined'))
+var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
+    ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0',
+    mongoURL = process.env.OPENSHIFT_MONGODB_DB_URL || process.env.MONGO_URL,
+    mongoURLLabel = "";
 var express = require('express');
 //var nodeMailer = require('nodemailer');
 var bodyParser = require('body-parser');
@@ -54,10 +62,16 @@ app.post('/send-sms', function (req, res) {
 
 });
 
+app.use(function(err, req, res, next){
+  console.error(err.stack);
+  res.status(500).send('Something bad happened!');
+});
+
 app.use('*',function(req,res) {
 res.send('Error 404:Not Found!');
 });
 
-app.listen(3000, function() {
-console.log('Example App Listening on port 3000!');
-});
+app.listen(port, ip);
+console.log('Server running on http://%s:%s', ip, port);
+
+module.exports = app ;
