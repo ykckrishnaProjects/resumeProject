@@ -1,0 +1,16 @@
+.content {
+    max-width: 800px;
+    margin: auto;
+    padding: 10px;
+}
+
+.panel-default > .panel-heading-custom{
+  background-image: none;
+  background-color: #555;
+  color: #ffffff;
+}
+
+.ajaxLoader{
+	display: none;
+	margin-left: 10px;
+}

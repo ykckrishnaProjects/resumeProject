@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  
+<head>
+<meta charset="UTF-8">
+<title>Krishna's Profile</title>
+  
+<!---CDN Links-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/sidenav.css" />
+<link rel="stylesheet" type="text/css" href="css/generic.css" />
+<script src="js/sidenav.js"></script> 
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+<script src="website.js"></script>
+</head>
+<body>
+<div>
+<div id="header">
+	
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="padding-left:10px;">
+		<span class="navbar-brand" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+	  	<div class="navbar-header">
+        	<a class="navbar-brand" href="#">Krishna Chaitanya Yalamanchili</a>
+      	</div>
+      	<ul class="nav navbar-nav navbar-right" style="padding-right:100px;">
+      		<li><a href="/download"><span class="glyphicon glyphicon-download-alt"></span> Resume </a></li>
+      		<li><a href="/contact"><span class="glyphicon glyphicon-envelope"></span> Contact me</a></li>	
+    	</ul>
+	</nav>
+</div>
+<br/>
+</div>
+<div id="mySidenav" class="sidenav">
+ <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+  <a href="#about">About</a>
+  <a href="#workexp">Work Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#education">Education</a>
+  <a href="#awards">Awards</a>
+</div>
+<br/><br/>
+<div id="main" class="container-fluid content">
+  <div class="panel panel-default" id="about">
+    <div class="panel-heading panel-heading-custom">About</div>
+    
+    	 <ul class="list-group">
+  			<li class="list-group-item">Full stack web developer at NXP Semiconductors.</li>
+  			<li class="list-group-item">Self Driving Car enthusiast.</li>
+  			<li class="list-group-item">Always a student.</li>
+		 </ul> 
+    
+  </div>
+  <div class="panel panel-default" id="workexp">
+    <div class="panel-heading panel-heading-custom">Work Experience</div>
+    <ul class="list-group">
+  			<li class="list-group-item"><a data-toggle="collapse" href="#collapse1">NXP Semiconductors</a>
+  			<span class="badge">1.5 years</span>
+  				<div id="collapse1" class="panel-collapse collapse">
+        			<ul class="list-group">
+          				<li class="list-group-item">Full stack web development and maintenance of internal websites and tools.</li>
+          				<li class="list-group-item">Actively involved in Migration modules which includes Web Integration, Data Migration and Data validation.</li>
+          				<li class="list-group-item">Worked on Data mining algorithms to calculate the IP reuse metrics within the company.</li>
+          				<li class="list-group-item">Worked on building UI Regression test scripts using Selenium Web Driver.</li>
+          				<li class="list-group-item">Responsible for generating and embedding Data Analytics Reports using Tableau.</li>
+        			</ul>
+    			</div>
+  			</li>
+
+  			<li class="list-group-item"><a data-toggle="collapse" href="#collapse2">Freescale Semiconductors</a>
+  			<span class="badge">4 months</span>
+  				<div id="collapse2" class="panel-collapse collapse">
+        			<ul class="list-group">
+          				<li class="list-group-item">Analyzed team’s existing infrastructure and identified areas of improvement in the Packaging and Assemble Rule Interface System’s website interface.</li>
+          				<li class="list-group-item">Improved the performance (response time) of the website by 10x times.</li>
+          				<li class="list-group-item">Aggregated different scripts used to display / generate dynamic content.</li>
+        			</ul>
+    			</div>
+  			</li>
+  			<li class="list-group-item"><a data-toggle="collapse" href="#collapse3">Infosys Ltd</a>
+  			<span class="badge">2.5 years</span>
+  				<div id="collapse3" class="panel-collapse collapse">
+        			<ul class="list-group">
+          				<li class="list-group-item">Worked on two major projects namely Gross Drawdown of Commercial Loans and Utility Bill Payment which are a part of Finacle, a product developed by Infosys that provides universal banking and financial solutions to banks</li>
+          				<li class="list-group-item">Developed an inquiry configuration framework for Finacle</li>
+          			</ul>
+    			</div>
+  			</li>
+	</ul>
+  </div>
+  <div class="panel panel-default" id="projects">
+    <div class="panel-heading panel-heading-custom">Projects <a href="https://github.com/ykckrishnaProjects" target= "_blank" class="btn btn-primary fa fa-github navbar-inverse pull-right" ></a></div>
+     <ul class="list-group">
+  			<li class="list-group-item"><a data-toggle="collapse" href="#collapse4">Self Driving Car Project</a>
+  			
+  				<div id="collapse4" class="panel-collapse collapse">
+  					<br/>
+        			<p>The curriculum covers topics including deep learning, computer vision, sensor fusion, localization, control, path planning, and automotive hardware. Main objectives of the course would be to identify lane-lines using Computer Vision and Deep Learning techniques. Used Google’s TensorFlow framework for Deep Learning.</p>
+    			</div>
+  			</li>
+
+  			<li class="list-group-item"><a data-toggle="collapse" href="#collapse5">Face Recognition Project</a>
+  			
+  				<div id="collapse5" class="panel-collapse collapse">
+  				<br/>
+        			<p>Played the role of an architect on the server module of a Face Recognition Project. This project aims to help instructors with aking attendance based on the photo taken in the class. Created Module structure, Uses and Process structure along with the Interface specifications for the server module</p>
+    			</div>
+  			</li>
+  			<li class="list-group-item"><a data-toggle="collapse" href="#collapse6">Arithmatic Server Using RPC</a>
+  			
+  				<div id="collapse6" class="panel-collapse collapse">
+  				<br/>
+        			<p>Implemented an Arithmetic server using RPC where user inputs arithmetic expressions, the server evaluates its expression and returns results. The communication between the client and the server was established through datagrams (UDP)</p>
+    			</div>
+  			</li>
+	</ul>
+  </div>
+  <div class="panel panel-default" id="education">
+    <div class="panel-heading panel-heading-custom">Education</div>
+    <ul class="list-group">
+    	<li class="list-group-item"> <a data-toggle="modal" href="#modal1"> Master of Science in Computer Science </a>
+  			<span class="badge">GPA: 3.59/4.00</span>
+  			<div class="modal fade" id="modal1" role="dialog">
+    			<div class="modal-dialog">
+    
+      <!-- Modal content-->
+      				<div class="modal-content">
+        				<div class="modal-header">
+          				<button type="button" class="close" data-dismiss="modal">&times;</button>
+          				<h4 class="modal-title"> Iowa State University </h4>
+        			</div>
+        			<div class="modal-body">
+          				<p><span class="glyphicon glyphicon-education"></span> (Jan 2014 – Dec 2015) </p>
+          				<br/>
+          				<p> Distributed Software Development,<span class="text-success"> Design and Analysis of Algorithms, Theory of Computation</span>, Advanced Topics in Database Systems, Distributed and Network Operating systems, Computer Network protocols,<span class="text-danger"> Information warfare.</span> </p>
+        			</div>
+        			<div class="modal-footer">
+        				<span class="glyphicon glyphicon-thumbs-up text-success pull-left"> </span> 
+        				<span class="glyphicon glyphicon-thumbs-down text-danger pull-left" style="padding-left:10px;"> </span>
+          				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        			</div>
+      				</div>
+      
+    			</div>
+ 			 </div>
+
+  		</li>
+  		<li class="list-group-item"><a data-toggle="modal" href="#modal2"> Bachelors of Technology in Computer Science </a>
+  			<span class="badge">GPA: 7.56/10</span>
+  			<div class="modal fade" id="modal2" role="dialog">
+    			<div class="modal-dialog">
+    
+      <!-- Modal content-->
+      				<div class="modal-content">
+        				<div class="modal-header">
+          				<button type="button" class="close" data-dismiss="modal">&times;</button>
+          				<h4 class="modal-title"> Andhra University </h4>
+        			</div>
+        			<div class="modal-body">
+          				<p><span class="glyphicon glyphicon-education"></span> (Aug 2007 – Jun 2011) </p>
+          				<br/>
+          				<p><span class="text-success">Introduction to Algorithms, OOPS, Database Systems</span>, Computer Architecture, Compiler Design, Introduction to Networking</p>
+        			</div>
+        			<div class="modal-footer">
+        				<span class="glyphicon glyphicon-thumbs-up text-success pull-left"> </span> 
+        				<span class="glyphicon glyphicon-thumbs-down text-danger pull-left" style="padding-left:10px;"> </span>
+          				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        			</div>
+      				</div>
+      
+    			</div>
+ 			 </div>
+  		</li>
+
+    </ul>
+  </div>
+  <div class="panel panel-default" id="awards">
+    <div class="panel-heading panel-heading-custom">Awards</div>
+     <ul class="list-group">
+  			<li class="list-group-item">Awarded the quarterly <b>Gem of The Quarter</b> by Infosys Limited for Q1FY13.</li>
+  			<li class="list-group-item">Awarded the <b>On The Spot Award</b> by Infosys Limited for the exception performance in the month of February 2013.</li>
+  			
+	 </ul> 
+  </div>
+  
+</div>
+</body>
+</html>
