@@ -4,8 +4,7 @@
   "description": "My First Web App using Express and Bootstrap",
   "main": "website.js",
   "scripts": {
-    "start": "node server.js",
- //   "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node website.js",
     "test": "IP=0.0.0.0 PORT=3030 mocha --timeout 5000 tests/*_test.js"
   },
   "author": "Krishna Yalanchili",
