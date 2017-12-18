@@ -1,5 +1,5 @@
 var express = require('express');
-var nodeMailer = require('nodemailer');
+//var nodeMailer = require('nodemailer');
 var bodyParser = require('body-parser');
 var flash = require('express-flash-messages');
 var app = express();
@@ -28,56 +28,6 @@ router.get('/download', function (req, res) {
         var file = __dirname + '/files/YKC_Resume.pdf';
   		res.download(file); ;
 });
-
-app.post('/send-email', function (req, res) {
-
-	nodeMailer.createTestAccount((err, account) => {
-
-    // create reusable transporter object using the default SMTP transport
-    let transporter = nodeMailer.createTransport({
-        host: 'smtp.ethereal.email',
-        port: 587,
-        secure: false, // true for 465, false for other ports
-        auth: {
-            user: account.user, // generated ethereal user
-            pass: account.pass  // generated ethereal password
-        }
-    });
-
-    // setup email data with unicode symbols
-     let mailOptions = {
-          from: req.body.email, // sender address
-          to: '"Krishna" <ykc.krishna.projects@gmail.com>', // list of receivers
-          subject:"Message from:" + req.body.nameOfSender, // Subject line
-          text: req.body.comment, // plain text body
-          html: "<b>Hurray!Email from Personal Website</b>" // html body
-      };
-
-    // send mail with defined transport object
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            return console.log(error);
-        }
-        console.log('Message sent: %s', info.messageId);
-        // Preview only available when sending through an Ethereal account
-        console.log('Preview URL: %s', nodeMailer.getTestMessageUrl(info));
-
-        // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@blurdybloop.com>
-        // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
-    });
-});
-   
-          res.setHeader('Content-Type', 'application/json');
-
-			//mimic a slow network connection
-			setTimeout(function(){
-
-			res.send(JSON.stringify({
-			message: req.body.nameOfSender || null
-			}));
-		    }, 1000)
-      
-      });
 
 
 app.post('/send-sms', function (req, res) {
