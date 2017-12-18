@@ -1,16 +1,14 @@
 var morgan  = require('morgan');
-Object.assign=require('object-assign')
+Object.assign=require('object-assign');
+var express = require('express');
+var app = express();
 app.engine('html', require('ejs').renderFile);
 app.use(morgan('combined'))
 var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
     ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0',
     mongoURL = process.env.OPENSHIFT_MONGODB_DB_URL || process.env.MONGO_URL,
     mongoURLLabel = "";
-var express = require('express');
-//var nodeMailer = require('nodemailer');
 var bodyParser = require('body-parser');
-//var flash = require('express-flash-messages');
-var app = express();
 var router = express.Router();
 var accountSid = 'ACaa0f7962a43faa226c1541ff3586f4a0'; 
 var authToken = '7c347e3afb0105dd9ae483399dec10e2'; 
