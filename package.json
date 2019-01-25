@@ -1,5 +1,5 @@
 {
-  "name": "firstwebapp",
+  "name": "MyResume",
   "version": "1.0.0",
   "description": "My First Web App using Express and Bootstrap",
   "main": "website.js",

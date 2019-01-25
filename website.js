@@ -10,8 +10,8 @@ var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
     mongoURLLabel = "";
 var bodyParser = require('body-parser');
 var router = express.Router();
-var accountSid = 'ACaa0f7962a43faa226c1541ff3586f4a0'; 
-var authToken = '7c347e3afb0105dd9ae483399dec10e2'; 
+var accountSid = config.accountSid; 
+var authToken = config.authToken; 
  
 //require the Twilio module and create a REST client 
 var client = require('twilio')(accountSid, authToken); 
@@ -31,7 +31,7 @@ router.get('/contact', function (req, res) {
 });
 
 router.get('/download', function (req, res) {
-        var file = __dirname + '/files/YKC_Resume.pdf';
+        var file = __dirname + '/files/YKC_Resume_Jan_2019.pdf';
   		res.download(file); ;
 });
 
